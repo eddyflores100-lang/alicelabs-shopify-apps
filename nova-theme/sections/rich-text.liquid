@@ -1,0 +1,30 @@
+<section class="section">
+  <div class="page-width">
+    <div class="rich-text">
+      {%- if section.settings.heading != blank -%}
+        <h2 class="rich-text__title">{{ section.settings.heading }}</h2>
+      {%- endif -%}
+      {%- if section.settings.text != blank -%}
+        <div class="rich-text__text">{{ section.settings.text }}</div>
+      {%- endif -%}
+      {%- if section.settings.button_label != blank -%}
+        <div class="mt-4">
+          <a href="{{ section.settings.button_link }}" class="btn btn--secondary">{{ section.settings.button_label }}</a>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Rich Text",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "About Our Brand" },
+    { "type": "richtext", "id": "text", "label": "Text", "default": "<p>We believe in quality, craftsmanship, and timeless design. Every product is thoughtfully created to last.</p>" },
+    { "type": "text", "id": "button_label", "label": "Button text" },
+    { "type": "url", "id": "button_link", "label": "Button link" }
+  ],
+  "presets": [{ "name": "Rich Text" }]
+}
+{% endschema %}

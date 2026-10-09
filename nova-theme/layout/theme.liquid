@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="{{ request.locale.iso_code }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="{{ canonical_url }}">
+  {%- if settings.favicon != blank -%}
+    <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32 }}">
+  {%- endif -%}
+  <title>{{ page_title }}{% if current_tags %} — {{ current_tags | join: ', ' }}{% endif %}{% unless page_title contains shop.name %} — {{ shop.name }}{% endunless %}</title>
+  {% if page_description %}<meta name="description" content="{{ page_description | escape }}">{% endif %}
+  {{ content_for_header }}
+  {{ 'base.css' | asset_url | stylesheet_tag }}
+  {% style %}
+    :root {
+      --color-bg: {{ settings.color_bg }};
+      --color-text: {{ settings.color_text }};
+      --color-text-muted: {{ settings.color_text_muted }};
+      --color-border: {{ settings.color_border }};
+      --color-accent: {{ settings.color_accent }};
+      --color-btn-bg: {{ settings.color_btn_bg }};
+      --color-btn-text: {{ settings.color_btn_text }};
+      --font-heading: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
+      --font-body: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
+    }
+    body { font-family: var(--font-body); color: var(--color-text); background: var(--color-bg); }
+    h1,h2,h3,h4,h5,h6 { font-family: var(--font-heading); }
+  {% endstyle %}
+  <script>document.documentElement.className = 'js';</script>
+</head>
+<body class="template-{{ request.page_type | handle }}">
+  <a class="visually-hidden" href="#MainContent">Skip to content</a>
+  {% sections 'header-group' %}
+  <main id="MainContent" role="main" tabindex="-1">
+    {{ content_for_layout }}
+  </main>
+  {% sections 'footer-group' %}
+</body>
+</html>

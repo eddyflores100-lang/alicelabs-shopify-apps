@@ -1,0 +1,51 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Nova",
+    "theme_version": "1.0.0",
+    "theme_author": "AliceLabs LLC",
+    "theme_documentation_url": "https://github.com/eddyflores100-lang/alicelabs-shopify-apps",
+    "theme_support_url": "https://alicelabs.site"
+  },
+  {
+    "name": "Colors",
+    "settings": [
+      { "type": "header", "content": "Background" },
+      { "type": "color", "id": "color_bg", "label": "Background", "default": "#ffffff" },
+      { "type": "header", "content": "Text" },
+      { "type": "color", "id": "color_text", "label": "Primary text", "default": "#1a1a1a" },
+      { "type": "color", "id": "color_text_muted", "label": "Secondary text", "default": "#717171" },
+      { "type": "header", "content": "Borders" },
+      { "type": "color", "id": "color_border", "label": "Borders", "default": "#e8e8e8" },
+      { "type": "header", "content": "Buttons" },
+      { "type": "color", "id": "color_btn_bg", "label": "Button background", "default": "#1a1a1a" },
+      { "type": "color", "id": "color_btn_text", "label": "Button text", "default": "#ffffff" },
+      { "type": "color", "id": "color_accent", "label": "Accent / links", "default": "#1a1a1a" }
+    ]
+  },
+  {
+    "name": "Typography",
+    "settings": [
+      { "type": "font_picker", "id": "type_header_font", "label": "Heading font", "default": "assistant_n6" },
+      { "type": "font_picker", "id": "type_body_font", "label": "Body font", "default": "assistant_n4" }
+    ]
+  },
+  {
+    "name": "Logo",
+    "settings": [
+      { "type": "image_picker", "id": "favicon", "label": "Favicon" },
+      { "type": "image_picker", "id": "logo", "label": "Logo" },
+      { "type": "range", "id": "logo_width", "label": "Logo width", "min": 50, "max": 300, "step": 10, "default": 120, "unit": "px" }
+    ]
+  },
+  {
+    "name": "Social",
+    "settings": [
+      { "type": "text", "id": "social_instagram", "label": "Instagram" },
+      { "type": "text", "id": "social_facebook", "label": "Facebook" },
+      { "type": "text", "id": "social_twitter", "label": "Twitter / X" },
+      { "type": "text", "id": "social_tiktok", "label": "TikTok" },
+      { "type": "text", "id": "social_pinterest", "label": "Pinterest" }
+    ]
+  }
+]

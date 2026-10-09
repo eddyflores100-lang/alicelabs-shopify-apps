@@ -1,0 +1,6 @@
+{
+  "general": { "search": { "placeholder": "Buscar" }, "404": { "title": "Página no encontrada", "subtext": "La página que buscas no existe." } },
+  "cart": { "title": "Carrito", "empty": "Tu carrito está vacío", "subtotal": "Subtotal", "checkout": "Finalizar compra" },
+  "products": { "product": { "add_to_cart": "Agregar al carrito", "sold_out": "Agotado", "on_sale": "Oferta" } },
+  "accessibility": { "skip_to_text": "Saltar al contenido" }
+}

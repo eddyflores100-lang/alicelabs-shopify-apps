@@ -1,0 +1,58 @@
+{
+  "current": {
+    "color_bg": "#ffffff",
+    "color_text": "#1a1a1a",
+    "color_text_muted": "#717171",
+    "color_border": "#e8e8e8",
+    "color_btn_bg": "#1a1a1a",
+    "color_btn_text": "#ffffff",
+    "color_accent": "#1a1a1a",
+    "type_header_font": "assistant_n6",
+    "type_body_font": "assistant_n4",
+    "logo_width": 120
+  },
+  "presets": {
+    "Default": {
+      "color_bg": "#ffffff",
+      "color_text": "#1a1a1a",
+      "color_btn_bg": "#1a1a1a",
+      "color_btn_text": "#ffffff"
+    },
+    "Warm": {
+      "color_bg": "#faf8f5",
+      "color_text": "#2d2420",
+      "color_text_muted": "#8a7a6e",
+      "color_border": "#e0d8d0",
+      "color_btn_bg": "#8b6f47",
+      "color_btn_text": "#ffffff",
+      "color_accent": "#8b6f47"
+    },
+    "Dark": {
+      "color_bg": "#0d0d0d",
+      "color_text": "#f0f0f0",
+      "color_text_muted": "#888888",
+      "color_border": "#2a2a2a",
+      "color_btn_bg": "#f0f0f0",
+      "color_btn_text": "#0d0d0d",
+      "color_accent": "#f0f0f0"
+    },
+    "Ocean": {
+      "color_bg": "#f7fafb",
+      "color_text": "#1a3a4a",
+      "color_text_muted": "#6a8a9a",
+      "color_border": "#d0dde3",
+      "color_btn_bg": "#1a3a4a",
+      "color_btn_text": "#ffffff",
+      "color_accent": "#1a3a4a"
+    },
+    "Sage": {
+      "color_bg": "#f5f7f2",
+      "color_text": "#2d3a2d",
+      "color_text_muted": "#7a8a7a",
+      "color_border": "#d8e0d5",
+      "color_btn_bg": "#5a7a5a",
+      "color_btn_text": "#ffffff",
+      "color_accent": "#5a7a5a"
+    }
+  }
+}

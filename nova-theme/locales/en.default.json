@@ -1,0 +1,6 @@
+{
+  "general": { "search": { "placeholder": "Search" }, "404": { "title": "Page not found", "subtext": "The page you were looking for does not exist." } },
+  "cart": { "title": "Cart", "empty": "Your cart is empty", "subtotal": "Subtotal", "checkout": "Check out" },
+  "products": { "product": { "add_to_cart": "Add to Cart", "sold_out": "Sold Out", "on_sale": "Sale" } },
+  "accessibility": { "skip_to_text": "Skip to content" }
+}

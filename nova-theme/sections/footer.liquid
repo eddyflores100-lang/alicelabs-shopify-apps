@@ -1,0 +1,53 @@
+<footer class="footer">
+  <div class="page-width">
+    <div class="footer__grid">
+      <div>
+        <h3 class="footer__title">{{ shop.name }}</h3>
+        <p style="color:var(--color-text-muted);font-size:0.875rem;margin-bottom:12px;">{{ section.settings.about_text }}</p>
+        <div class="footer__social">
+          {%- if settings.social_instagram != blank -%}<a href="{{ settings.social_instagram }}" aria-label="Instagram">📷</a>{%- endif -%}
+          {%- if settings.social_facebook != blank -%}<a href="{{ settings.social_facebook }}" aria-label="Facebook">📘</a>{%- endif -%}
+          {%- if settings.social_twitter != blank -%}<a href="{{ settings.social_twitter }}" aria-label="Twitter">🐦</a>{%- endif -%}
+          {%- if settings.social_tiktok != blank -%}<a href="{{ settings.social_tiktok }}" aria-label="TikTok">🎵</a>{%- endif -%}
+        </div>
+      </div>
+
+      <div>
+        <h3 class="footer__title">Shop</h3>
+        {%- for link in section.settings.menu_shop.links -%}
+          <a href="{{ link.url }}" class="footer__link">{{ link.title }}</a>
+        {%- endfor -%}
+      </div>
+
+      <div>
+        <h3 class="footer__title">Support</h3>
+        {%- for link in section.settings.menu_support.links -%}
+          <a href="{{ link.url }}" class="footer__link">{{ link.title }}</a>
+        {%- endfor -%}
+      </div>
+
+      <div>
+        <h3 class="footer__title">Company</h3>
+        {%- for link in section.settings.menu_company.links -%}
+          <a href="{{ link.url }}" class="footer__link">{{ link.title }}</a>
+        {%- endfor -%}
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>&copy; {{ 'now' | date: '%Y' }} {{ shop.name }}. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    { "type": "text", "id": "about_text", "label": "About text", "default": "Quality products, exceptional service." },
+    { "type": "link_list", "id": "menu_shop", "default": "footer", "label": "Shop menu" },
+    { "type": "link_list", "id": "menu_support", "label": "Support menu" },
+    { "type": "link_list", "id": "menu_company", "label": "Company menu" }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,10 @@
+{
+  "sections": {
+    "hero": { "type": "hero", "settings": { "heading": "New Arrivals", "subheading": "Shop our latest collection.", "button_label": "Shop Now" } },
+    "featured": { "type": "featured-collection", "settings": { "eyebrow": "Best Sellers", "title": "Featured Products", "products_to_show": 8 } },
+    "rich-text": { "type": "rich-text", "settings": { "heading": "About Our Brand", "text": "<p>We believe in quality, craftsmanship, and timeless design. Every product is thoughtfully created to last.</p>" } },
+    "image-banner": { "type": "image-banner", "settings": { "heading": "Summer Collection", "text": "Discover pieces designed for the season.", "button_label": "Shop Collection" } },
+    "newsletter": { "type": "newsletter", "settings": { "heading": "Stay in Touch", "text": "Subscribe for exclusive offers, new arrivals, and style inspiration." } }
+  },
+  "order": ["hero", "featured", "rich-text", "image-banner", "newsletter"]
+}

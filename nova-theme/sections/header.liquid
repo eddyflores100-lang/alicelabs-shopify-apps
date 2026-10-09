@@ -1,0 +1,43 @@
+<header class="header">
+  <div class="page-width">
+    <div class="header__inner">
+      <nav class="header__nav">
+        {%- for link in section.settings.menu.links -%}
+          <a href="{{ link.url }}">{{ link.title }}</a>
+        {%- endfor -%}
+      </nav>
+
+      <div class="header__logo">
+        {%- if settings.logo != blank -%}
+          <a href="{{ routes.root_url }}">
+            <img src="{{ settings.logo | image_url: width: settings.logo_width }}" alt="{{ shop.name }}" width="{{ settings.logo_width }}" height="auto" loading="eager">
+          </a>
+        {%- else -%}
+          <a href="{{ routes.root_url }}">{{ shop.name }}</a>
+        {%- endif -%}
+      </div>
+
+      <div class="header__actions">
+        <a href="{{ routes.search_url }}" class="header__icon" aria-label="Search">🔍</a>
+        {%- if shop.customer_accounts_enabled -%}
+          <a href="{{ routes.account_url }}" class="header__icon" aria-label="Account">👤</a>
+        {%- endif -%}
+        <a href="{{ routes.cart_url }}" class="header__icon" aria-label="Cart">
+          🛒
+          {%- if cart.item_count > 0 -%}
+            <span class="header__cart-count">{{ cart.item_count }}</span>
+          {%- endif -%}
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": [
+    { "type": "link_list", "id": "menu", "default": "main-menu", "label": "Navigation menu" }
+  ]
+}
+{% endschema %}

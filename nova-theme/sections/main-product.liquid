@@ -1,0 +1,35 @@
+<section class="section">
+  <div class="page-width" style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;">
+    <div>
+      <img src="{{ product.featured_image | image_url: width: 800 }}" alt="{{ product.title | escape }}" style="width:100%;border-radius:0;" width="800" height="1000">
+    </div>
+    <div>
+      {%- if product.vendor != blank -%}
+        <p style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-text-muted);margin-bottom:8px;">{{ product.vendor }}</p>
+      {%- endif -%}
+      <h1 style="margin-bottom:12px;">{{ product.title }}</h1>
+
+      <div class="product-card__price" style="font-size:1.25rem;margin-bottom:24px;">
+        {%- if product.compare_at_price > product.price -%}
+          <span class="product-card__price--sale">{{ product.price | money }}</span>
+          <span class="product-card__compare-price">{{ product.compare_at_price | money }}</span>
+        {%- else -%}
+          <span>{{ product.price | money }}</span>
+        {%- endif -%}
+      </div>
+
+      <div style="margin-bottom:24px;color:var(--color-text-muted);line-height:1.7;">{{ product.description }}</div>
+
+      {%- form 'product', product -%}
+        <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+        <button type="submit" class="btn btn--primary btn--full" {% unless product.available %}disabled{% endunless %}>
+          {%- if product.available -%}Add to Cart{%- else -%}Sold Out{%- endif -%}
+        </button>
+      {%- endform -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{ "name": "Product", "settings": [] }
+{% endschema %}
